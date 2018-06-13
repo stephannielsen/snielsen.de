@@ -138,3 +138,4 @@ $RECYCLE.BIN/
 vendor
 js/*.min.js
 css/*.min.css
+dist
