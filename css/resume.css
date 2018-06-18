@@ -150,3 +150,14 @@ a {
 a:hover, a:focus, a:active {
   color: #0d0d19;
 }
+
+.devicon-xamarin-plain {
+  max-width: 2em;
+  width: 48px;
+  height: 48px;
+}
+
+/* if you want to change the original color */
+.devicon-xamarin-plain path {
+  fill: #848897;
+}

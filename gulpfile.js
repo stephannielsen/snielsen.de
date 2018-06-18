@@ -41,7 +41,8 @@ gulp.task("vendor", function() {
         "!./node_modules/devicon/*.md",
         "!./node_modules/devicon/gulpfile.js",
         "!./node_modules/devicon/LICENSE",
-        "!./node_modules/devicon/*.html"
+        "!./node_modules/devicon/*.html",
+        "!./node_modules/devicon/icons/**/*.eps"
       ])
       .pipe(gulp.dest("./vendor/devicon"));
 
