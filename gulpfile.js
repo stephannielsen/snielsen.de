@@ -33,6 +33,18 @@ gulp.task("vendor", function() {
     ])
     .pipe(gulp.dest("./vendor/devicons"));
 
+    // Devicon
+    gulp
+      .src([
+        "./node_modules/devicon/**/*",
+        "!./node_modules/devicon/*.json",
+        "!./node_modules/devicon/*.md",
+        "!./node_modules/devicon/gulpfile.js",
+        "!./node_modules/devicon/LICENSE",
+        "!./node_modules/devicon/*.html"
+      ])
+      .pipe(gulp.dest("./vendor/devicon"));
+
   // Font Awesome
   gulp
     .src([
