@@ -57,11 +57,14 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+        </li>
       </ul>
     </div>
     <span class="navbar-text">
-      <a href="">Legal</a> |
-      <a href="">Privacy</a>
+      <a href="" data-toggle="modal" data-target="#legalModal">Legal</a> |
+      <a href="" data-toggle="modal" data-target="#privacyModal">Privacy</a>
     </span>
   </nav>
 
@@ -250,45 +253,54 @@
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
             <p>
-              I began programming with HTML, CSS, PHP and MySql in the early 2000's and moved to application development with Java and C# during my studies. C# and the .NET framework is my main development environment for the past 6 years. Recently I picked up again web development with JavaScript (ES5+), HTML5 and CSS3, also diving into using JavaScript for backend development using NodeJS.<br>
-              I thriving to write clean, maintainable and efficient code to create powerful and awesome products. I am experienced in working with cross-functional, multilingual teams in agile environments under high pressure.
-              I am a passionate learner, always trying to use the best tool to solve the problem at hand. I constantly read technical books, blogs, and listen to podcasts to keep up with the latest and greatest in development technology and personal improvement. I expand and practice my skills with online courses (e.g. Udemy, freeCodeCamp), and practice tools, such as <a href="https://www.codewars.com/users/snielsen">Codewars</a>.
+              I began programming with HTML, CSS, PHP and MySql in the early 2000's and moved to application development with Java and
+              C# during my studies. C# and the .NET framework is my main development environment for the past 6 years. Recently
+              I picked up again web development with JavaScript (ES5+), HTML5 and CSS3, also diving into using JavaScript
+              for backend development using NodeJS.
+              <br> I thriving to write clean, maintainable and efficient code to create powerful and awesome products. I am experienced
+              in working with cross-functional, multilingual teams in agile environments under high pressure. I am a passionate
+              learner, always trying to use the best tool to solve the problem at hand. I constantly read technical books,
+              blogs, and listen to podcasts to keep up with the latest and greatest in development technology and personal
+              improvement. I expand and practice my skills with online courses (e.g. Udemy, freeCodeCamp), and practice tools,
+              such as
+              <a href="https://www.codewars.com/users/snielsen">Codewars</a>.
             </p>
           </div>
         </div>
 
         <ul class="list-inline list-icons">
-            <li class="list-inline-item">
-              <i class="devicon-dot-net-plain" title=".NET"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicon-csharp-plain" title="C#"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-msql_server" title="MS SQL Server"></i>
-            </li>
-            <li class="list-inline-item">
-              <svg title="Xamarin" class="devicon-xamarin-plain" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" version="1.1">
-                <g id="surface1">
-                  <path d="M 32.875 5 L 15.125 5 C 13.988281 5 12.871094 5.652344 12.308594 6.648438 L 3.421875 22.339844 C 2.859375 23.351563 2.859375 24.648438 3.421875 25.660156 L 12.308594 41.351563 C 12.871094 42.351563 13.988281 43 15.125 43 L 32.875 43 C 34.011719 43 35.128906 42.347656 35.691406 41.351563 L 44.578125 25.660156 C 45.140625 24.648438 45.140625 23.351563 44.578125 22.339844 L 35.691406 6.648438 C 35.128906 5.652344 34.011719 5 32.875 5 Z "
-                  />
-                  <path style=" fill:#FFFFFF;" d="M 32.613281 34 L 29.5625 34 C 29.417969 34 29.277344 33.910156 29.210938 33.78125 L 24.046875 24.199219 C 24.019531 24.148438 24.011719 24.089844 24 24.039063 C 23.988281 24.089844 23.980469 24.148438 23.953125 24.199219 L 18.773438 33.78125 C 18.714844 33.910156 18.582031 33.988281 18.4375 34 L 15.386719 34 C 15.113281 34 14.902344 33.632813 15.046875 33.378906 L 20.09375 24 L 15.046875 14.601563 C 14.921875 14.375 15.074219 14.050781 15.3125 14 L 18.4375 14 C 18.570313 14 18.703125 14.089844 18.773438 14.207031 L 23.953125 23.792969 C 23.980469 23.84375 23.988281 23.890625 24 23.949219 C 24.011719 23.890625 24.019531 23.84375 24.046875 23.792969 L 29.210938 14.207031 C 29.285156 14.078125 29.417969 14 29.5625 14 L 32.613281 14 C 32.878906 14 33.078125 14.355469 32.953125 14.601563 L 27.90625 24 L 32.953125 33.378906 C 33.097656 33.632813 32.886719 34 32.613281 34 Z "
-                  />
-                </g>
-              </svg>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicon-android-plain" title="Android"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-visualstudio" title="Visual Studio"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-git" title="Git"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fa fa-gitlab"></i>
-            </li>
+          <li class="list-inline-item">
+            <i class="devicon-dot-net-plain" title=".NET"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-csharp-plain" title="C#"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicons devicons-msql_server" title="MS SQL Server"></i>
+          </li>
+          <li class="list-inline-item">
+            <svg title="Xamarin" class="devicon-xamarin-plain" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 48 48" version="1.1">
+              <g id="surface1">
+                <path d="M 32.875 5 L 15.125 5 C 13.988281 5 12.871094 5.652344 12.308594 6.648438 L 3.421875 22.339844 C 2.859375 23.351563 2.859375 24.648438 3.421875 25.660156 L 12.308594 41.351563 C 12.871094 42.351563 13.988281 43 15.125 43 L 32.875 43 C 34.011719 43 35.128906 42.347656 35.691406 41.351563 L 44.578125 25.660156 C 45.140625 24.648438 45.140625 23.351563 44.578125 22.339844 L 35.691406 6.648438 C 35.128906 5.652344 34.011719 5 32.875 5 Z "
+                />
+                <path style=" fill:#FFFFFF;" d="M 32.613281 34 L 29.5625 34 C 29.417969 34 29.277344 33.910156 29.210938 33.78125 L 24.046875 24.199219 C 24.019531 24.148438 24.011719 24.089844 24 24.039063 C 23.988281 24.089844 23.980469 24.148438 23.953125 24.199219 L 18.773438 33.78125 C 18.714844 33.910156 18.582031 33.988281 18.4375 34 L 15.386719 34 C 15.113281 34 14.902344 33.632813 15.046875 33.378906 L 20.09375 24 L 15.046875 14.601563 C 14.921875 14.375 15.074219 14.050781 15.3125 14 L 18.4375 14 C 18.570313 14 18.703125 14.089844 18.773438 14.207031 L 23.953125 23.792969 C 23.980469 23.84375 23.988281 23.890625 24 23.949219 C 24.011719 23.890625 24.019531 23.84375 24.046875 23.792969 L 29.210938 14.207031 C 29.285156 14.078125 29.417969 14 29.5625 14 L 32.613281 14 C 32.878906 14 33.078125 14.355469 32.953125 14.601563 L 27.90625 24 L 32.953125 33.378906 C 33.097656 33.632813 32.886719 34 32.613281 34 Z "
+                />
+              </g>
+            </svg>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-android-plain" title="Android"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicons devicons-visualstudio" title="Visual Studio"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicons devicons-git" title="Git"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-gitlab"></i>
+          </li>
           <li class="list-inline-item">
             <i class="devicons devicons-html5" title="HTML5"></i>
           </li>
@@ -320,11 +332,145 @@
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
       <div class="my-auto">
         <h2 class="mb-5">Interests</h2>
-        <p>Exercise is important for me to refill my batteries during the week. I am an avid sailor since my childhood, spending my time on the water in the warmer months, but also enjoying putting in the necessary work on the boat during winter time. I generally enjoy spending my time outside with family and friends.</p>
-        <p class="mb-0">When forced indoors, I spend my time reading novels, play board and video games and explore the latest technology &amp; development trends, besides watching my kids grow up everyday <i class="fa fa-smile-o"></i>.</p>
+        <p>Exercise is important for me to refill my batteries during the week. I am an avid sailor since my childhood, spending
+          my time on the water in the warmer months, but also enjoying putting in the necessary work on the boat during winter
+          time. I generally enjoy spending my time outside with family and friends.</p>
+        <p class="mb-0">When forced indoors, I spend my time reading novels, play board and video games and explore the latest technology
+          &amp; development trends, besides watching my kids grow up everyday
+          <i class="fa fa-smile-o"></i>.</p>
       </div>
     </section>
 
+  </div>
+
+  <div class="modal" id="legalModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Legal Notice</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>Information provided according to Sec. 5 German Telemedia Act (TMG):</h4>
+          <p>
+            Stephan Nielsen
+            <br>Crüsemannallee 53
+            <br>28213 Bremen
+            <br>
+            <br>
+            <a href="mailto:info(at)snielsen(dot)de">Email: info(at)snielsen(dot).de</a>
+            <hr>
+          </p>
+          <h4>Responsible for contents acc. to Sec. 55, para. 2 German Federal Broadcasting Agreement (RstV):</h4>
+          <p>
+            Stephan Nielsen
+            <br>Crüsemannallee 53
+            <br>28213 Bremen
+            <br>
+            <br>The European Commission provides a platform for online dispute resolution (OS):
+            <a href="http://ec.europa.eu/consumers/odr">http://ec.europa.eu/consumers/odr</a>.
+            <br> Please find our email above.
+            <br>
+            <br>We do not take part in online dispute resolutions at consumer arbitration boards.
+            <hr>
+          </p>
+          <h4>Liability for Contents:</h4>
+          <p>
+            As service providers, we are liable for own contents of these websites according to Sec. 7, paragraph 1 German Telemedia
+            Act (TMG). However, according to Sec. 8 to 10 German Telemedia Act (TMG), service providers are not obligated
+            to permanently monitor submitted or stored information or to search for evidences that indicate illegal activities.
+            <br>
+            <br>Legal obligations to removing information or to blocking the use of information remain unchallenged. In this
+            case, liability is only possible at the time of knowledge about a specific violation of law. Illegal contents
+            will be removed immediately at the time we get knowledge of them.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="privacyModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Privacy Policy</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>General information and mandatory information</h4>
+          <h5>Data protection</h5>
+          <p>
+            The operators of this website take the protection of your personal data very seriously. We treat your personal data as confidential
+            and in accordance with the statutory data protection regulations and this privacy policy.
+            <br>
+            <br>If you use this website, various pieces of personal data will be collected. Personal information is any data
+            with which you could be personally identified. This privacy policy explains what information we collect and what
+            we use it for. It also explains how and for what purpose this happens.
+            <br>
+            <br>Please note that data transmitted via the internet (e.g. via email communication) may be subject to security
+            breaches. Complete protection of your data from third-party access is not possible.
+          </p>
+          <h5>Notice concerning the party responsible for this website</h5>
+          <p>
+            The party responsible for processing data on this website is:
+            <br>
+            <br>Stephan Nielsen
+            <br>Crüsemannallee 53
+            <br>28213 Bremen
+            <br>
+            <br>
+            <a href="mailto:info(at)snielsen(dot)de">Email: info(at)snielsen(dot)de</a>
+            <br>
+            <br>The responsible party is the natural or legal person who alone or jointly with others decides on the purposes
+            and means of processing personal data (names, email addresses, etc.).
+          </p>
+          <hr>
+          <h4>Data collection on our website</h4>
+          <h5>Server log files</h5>
+          <p>
+            The website provider automatically collects and stores information that your browser automatically transmits to us in "server
+            log files". These are:
+            <ul>
+              <li>Browser type and browser version</li>
+              <li>Operating system used</li>
+              <li>Referrer URL</li>
+              <li>Host name of the accessing computer</li>
+              <li>Time of the server request</li>
+              <li>IP address</li>
+            </ul>
+            These data will not be combined with data from other sources.
+            <br>
+            <br>The basis for data processing is Art. 6 (1) (f) DSGVO, which allows the processing of data to fulfill a contract
+            or for measures preliminary to a contract.
+          </p>
+          <h5>Contact form</h5>
+          <p>
+            Should you send us questions via the contact form, we will collect the data entered on the form, including the contact details
+            you provide, to answer your question and any follow-up questions. We do not share this information without your
+            permission.
+            <br>
+            <br>We will, therefore, process any data you enter onto the contact form only with your consent per Art. 6 (1)(a)
+            DSGVO. You may revoke your consent at any time. An informal email making this request is sufficient. The data
+            processed before we receive your request may still be legally processed.
+            <br>
+            <br>We will retain the data you provide on the contact form until you request its deletion, revoke your consent for
+            its storage, or the purpose for its storage no longer pertains (e.g. after fulfilling your request). Any mandatory
+            statutory provisions, especially those regarding mandatory data retention periods, remain unaffected by this
+            provision.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Bootstrap core JavaScript -->
