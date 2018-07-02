@@ -10,14 +10,19 @@
  */
 
 $(function() {
-    $('a[href^="mailto:"][class!="circle-mail"]').each(function() {
+    $('a[href^="mailto:"][class^="mail-no-icon"]').each(function() {
      this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
      // Remove this line if you don't want to set the email address as link text:
-     this.innerHTML = '<i class="fa fa-envelope"></i> ' + this.href.replace('mailto:', '');
+     this.innerHTML = this.href.replace('mailto:', '');
     });
     $('a[href^="mailto:"][class^="circle-mail"]').each(function() {
      this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
      // Remove this line if you don't want to set the email address as link text:
     //  this.innerHTML = '<i class="fa fa-envelope"></i> ' + this.href.replace('mailto:', '');
+    });
+    $('a[href^="mailto:"][class!="circle-mail"][class!="mail-no-icon"]').each(function() {
+     this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
+     // Remove this line if you don't want to set the email address as link text:
+     this.innerHTML = '<i class="fa fa-envelope"></i> ' + this.href.replace('mailto:', '');
     });
    });
