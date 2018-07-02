@@ -3,7 +3,7 @@
 body {
   @include body-font;
   padding-top: 54px;
-  color: $waterloo;
+  color: $gray-700;
 }
 @media (min-width: 992px) {
   body {
