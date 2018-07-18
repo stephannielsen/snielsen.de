@@ -170,6 +170,15 @@ gulp.task("build:dist", ["clean:dist", "default"], function() {
     .src(["./vendor/devicons/fonts/*"])
     .pipe(gulp.dest("./dist/vendor/devicons/fonts"));
   gulp
+    .src([
+      "./vendor/devicon/devicon-colors.css",
+      "./vendor/devicon/devicon.min.css"
+    ])
+    .pipe(gulp.dest("./dist/vendor/devicon"));
+  gulp
+    .src(["./vendor/devicon/fonts/*"])
+    .pipe(gulp.dest("./dist/vendor/devicon/fonts"));
+  gulp
     .src(["./vendor/font-awesome/css/*.min.css"])
     .pipe(gulp.dest("./dist/vendor/font-awesome/css"));
   gulp
