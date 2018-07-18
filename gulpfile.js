@@ -10,7 +10,7 @@ var del = require("del");
 var serve = require("gulp-serve");
 
 // Copy third party libraries from /node_modules into /vendor
-gulp.task("vendor", function() {
+gulp.task("vendor", function(done) {
   // Bootstrap
   gulp
     .src([
@@ -78,6 +78,7 @@ gulp.task("vendor", function() {
   gulp
     .src(["./node_modules/simple-line-icons/css/**"])
     .pipe(gulp.dest("./vendor/simple-line-icons/css"));
+  done();
 });
 
 // Compile SCSS
@@ -153,7 +154,7 @@ gulp.task("clean:dist", function() {
 });
 
 // Dist task
-gulp.task("build:dist", gulp.series(["clean:dist", "default"], function() {
+gulp.task("build:dist", gulp.series(["clean:dist", "default"], function(done) {
   gulp.src(["./css/*.min.css"]).pipe(gulp.dest("./dist/css"));
   gulp.src(["./js/*.min.js"]).pipe(gulp.dest("./dist/js"));
   gulp.src(["./img/*"]).pipe(gulp.dest("./dist/img"));
@@ -205,6 +206,7 @@ gulp.task("build:dist", gulp.series(["clean:dist", "default"], function() {
     "browserconfig.xml"
   ]).pipe(gulp.dest("./dist"));
   gulp.src(["mailer.php"]).pipe(gulp.dest("./dist"));
+  done();
 }));
 
 gulp.task("dist", gulp.series("build:dist", serve({ root: "dist", port: 3030 })));
