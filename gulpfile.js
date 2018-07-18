@@ -95,7 +95,7 @@ gulp.task("css:compile", function() {
 });
 
 // Minify CSS
-gulp.task("css:minify", ["css:compile"], function() {
+gulp.task("css:minify", gulp.series("css:compile", function() {
   return gulp
     .src(["./css/*.css", "!./css/*.min.css"])
     .pipe(cleanCSS())
@@ -106,10 +106,10 @@ gulp.task("css:minify", ["css:compile"], function() {
     )
     .pipe(gulp.dest("./css"))
     .pipe(browserSync.stream());
-});
+}));
 
 // CSS
-gulp.task("css", ["css:compile", "css:minify"]);
+gulp.task("css", gulp.series(["css:compile", "css:minify"]));
 
 // Minify JavaScript
 gulp.task("js:minify", function() {
@@ -126,10 +126,10 @@ gulp.task("js:minify", function() {
 });
 
 // JS
-gulp.task("js", ["js:minify"]);
+gulp.task("js", gulp.series("js:minify"));
 
 // Default task
-gulp.task("default", ["css", "js", "vendor"]);
+gulp.task("default", gulp.series(["css", "js", "vendor"]));
 
 // Configure the browserSync task
 gulp.task("browserSync", function() {
@@ -141,11 +141,11 @@ gulp.task("browserSync", function() {
 });
 
 // Dev task
-gulp.task("dev", ["css", "js", "browserSync"], function() {
+gulp.task("dev", gulp.series(["css", "js", "browserSync"], function() {
   gulp.watch("./scss/*.scss", ["css"]);
   gulp.watch("./js/*.js", ["js"]);
   gulp.watch("./*.html", browserSync.reload);
-});
+}));
 
 //Clean dist folder
 gulp.task("clean:dist", function() {
@@ -153,7 +153,7 @@ gulp.task("clean:dist", function() {
 });
 
 // Dist task
-gulp.task("build:dist", ["clean:dist", "default"], function() {
+gulp.task("build:dist", gulp.series(["clean:dist", "default"], function() {
   gulp.src(["./css/*.min.css"]).pipe(gulp.dest("./dist/css"));
   gulp.src(["./js/*.min.js"]).pipe(gulp.dest("./dist/js"));
   gulp.src(["./img/*"]).pipe(gulp.dest("./dist/img"));
@@ -205,6 +205,6 @@ gulp.task("build:dist", ["clean:dist", "default"], function() {
     "browserconfig.xml"
   ]).pipe(gulp.dest("./dist"));
   gulp.src(["mailer.php"]).pipe(gulp.dest("./dist"));
-});
+}));
 
-gulp.task("dist", ["build:dist"], serve({ root: "dist", port: 3030 }));
+gulp.task("dist", gulp.series("build:dist", serve({ root: "dist", port: 3030 })));
