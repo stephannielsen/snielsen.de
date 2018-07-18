@@ -33,18 +33,18 @@ gulp.task("vendor", function() {
     ])
     .pipe(gulp.dest("./vendor/devicons"));
 
-    // Devicon
-    gulp
-      .src([
-        "./node_modules/devicon/**/*",
-        "!./node_modules/devicon/*.json",
-        "!./node_modules/devicon/*.md",
-        "!./node_modules/devicon/gulpfile.js",
-        "!./node_modules/devicon/LICENSE",
-        "!./node_modules/devicon/*.html",
-        "!./node_modules/devicon/icons/**/*.eps"
-      ])
-      .pipe(gulp.dest("./vendor/devicon"));
+  // Devicon
+  gulp
+    .src([
+      "./node_modules/devicon/**/*",
+      "!./node_modules/devicon/*.json",
+      "!./node_modules/devicon/*.md",
+      "!./node_modules/devicon/gulpfile.js",
+      "!./node_modules/devicon/LICENSE",
+      "!./node_modules/devicon/*.html",
+      "!./node_modules/devicon/icons/**/*.eps"
+    ])
+    .pipe(gulp.dest("./vendor/devicon"));
 
   // Font Awesome
   gulp
@@ -190,4 +190,4 @@ gulp.task("build:dist", ["clean:dist", "default"], function() {
   gulp.src(["index.html"]).pipe(gulp.dest("./dist"));
 });
 
-gulp.task('dist', ['build:dist'], serve({root: 'dist', port: 3030}));
+gulp.task("dist", ["build:dist"], serve({ root: "dist", port: 3030 }));

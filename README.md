@@ -12,6 +12,7 @@ After cloning, run `npm install` and then run `gulp dev` which will open up a pr
 - `gulp minify-css` minifies the compiled CSS file
 - `gulp minify-js` minifies the themes JS file
 - `gulp vendor` copies dependencies from node_modules to the vendor directory
+- `gulp dist` copies built files into `/dist` folder for distribution
 
 ## About
 

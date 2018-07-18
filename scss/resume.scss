@@ -14,5 +14,12 @@
 
 /* if you want to change the original color */
 .devicon-xamarin-plain path {
-  fill: $waterloo;
+  fill: $gray-700;
+  &:hover {
+    fill: $martinique;
+  }
+}
+
+#form-messages {
+  visibility: hidden;
 }

@@ -14,3 +14,15 @@ a {
     color: darken($primary, 15%);
   }
 }
+
+.btn-primary {
+  background-color: $gray-700;
+  border-color: lighten($primary, 15%);
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+    background-color: $primary;
+    border-color: lighten($primary, 15%);
+  }
+}
