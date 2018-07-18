@@ -23,3 +23,14 @@
 #form-messages {
   visibility: hidden;
 }
+
+#img-profile-container {
+  text-align: center;
+}
+
+.img-profile {
+  margin-top: 3rem;
+  max-width: 15rem;
+  max-height: 15rem;
+  border: 0.5rem solid fade-out($primary, 0.8);
+}
