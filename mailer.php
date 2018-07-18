@@ -13,7 +13,7 @@
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "Oops, some fields did not pass validation. Please try again. $name $message $email";
+            echo "Oops, some fields did not pass validation. Please fill out the marked fields.";
             exit;
         }
 

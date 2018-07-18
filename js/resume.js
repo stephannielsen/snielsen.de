@@ -100,6 +100,7 @@
         $("#nameInput").val("");
         $("#emailInput").val("");
         $("#messageInput").val("");
+        $(form).removeClass("was-validated");
       })
       .fail(function(data) {
         // Make sure that the formMessages div has the 'error' class.
