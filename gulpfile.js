@@ -33,19 +33,6 @@ gulp.task("vendor", function() {
     ])
     .pipe(gulp.dest("./vendor/devicons"));
 
-  // Devicon
-  gulp
-    .src([
-      "./node_modules/devicon/**/*",
-      "!./node_modules/devicon/*.json",
-      "!./node_modules/devicon/*.md",
-      "!./node_modules/devicon/gulpfile.js",
-      "!./node_modules/devicon/LICENSE",
-      "!./node_modules/devicon/*.html",
-      "!./node_modules/devicon/icons/**/*.eps"
-    ])
-    .pipe(gulp.dest("./vendor/devicon"));
-
   // Font Awesome
   gulp
     .src([
@@ -69,15 +56,6 @@ gulp.task("vendor", function() {
   gulp
     .src(["./node_modules/jquery.easing/*.js"])
     .pipe(gulp.dest("./vendor/jquery-easing"));
-
-  // Simple Line Icons
-  gulp
-    .src(["./node_modules/simple-line-icons/fonts/**"])
-    .pipe(gulp.dest("./vendor/simple-line-icons/fonts"));
-
-  gulp
-    .src(["./node_modules/simple-line-icons/css/**"])
-    .pipe(gulp.dest("./vendor/simple-line-icons/css"));
 });
 
 // Compile SCSS
@@ -181,12 +159,6 @@ gulp.task("build:dist", ["clean:dist", "default"], function() {
   gulp
     .src(["./vendor/jquery-easing/*.min.js"])
     .pipe(gulp.dest("./dist/vendor/jquery-easing"));
-  gulp
-    .src(["./vendor/simple-line-icons/css/simple-line-icons.css"])
-    .pipe(gulp.dest("./dist/vendor/simple-line-icons/css"));
-  gulp
-    .src(["./vendor/simple-line-icons/fonts/*"])
-    .pipe(gulp.dest("./dist/vendor/simple-line-icons/fonts"));
   gulp.src(["index.html"]).pipe(gulp.dest("./dist"));
   gulp.src(["mailer.php"]).pipe(gulp.dest("./dist"));
 });
