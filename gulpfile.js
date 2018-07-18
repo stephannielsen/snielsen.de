@@ -188,6 +188,7 @@ gulp.task("build:dist", ["clean:dist", "default"], function() {
     .src(["./vendor/simple-line-icons/fonts/*"])
     .pipe(gulp.dest("./dist/vendor/simple-line-icons/fonts"));
   gulp.src(["index.html"]).pipe(gulp.dest("./dist"));
+  gulp.src(["mailer.php"]).pipe(gulp.dest("./dist"));
 });
 
 gulp.task("dist", ["build:dist"], serve({ root: "dist", port: 3030 }));
