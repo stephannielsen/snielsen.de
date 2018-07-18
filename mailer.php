@@ -1,20 +1,19 @@
 <?php
-
 // Original published by Matt West on http://blog.teamtreehouse.com/create-ajax-contact-form  
 
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
-        $name = strip_tags(trim($_POST["name"]));
+        $name = strip_tags(trim($_POST["nameInput"]));
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $message = trim($_POST["message"]);
+        $email = filter_var(trim($_POST["emailInput"]), FILTER_SANITIZE_EMAIL);
+        $message = trim($_POST["messageInput"]);
 
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "Oops, some fields did not pass validation. Please try again.";
+            echo "Oops, some fields did not pass validation. Please try again. $name $message $email";
             exit;
         }
 
