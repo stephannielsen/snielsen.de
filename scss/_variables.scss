@@ -27,13 +27,15 @@ $cyan:    #17a2b8 !default;
 $east-bay:  #453F7B !default;
 $martinique:    #27274C !default;
 $ship-cove: #7286B6 !default;
+$shirt-color: rgb(10, 169, 235) !default;
 $lavender-gray: #B9B2CE !default;
 $waterloo:  #848897 !default;
 $desert-storm:  #F1F2F0 !default;
 $jungle-green: #2EAD5B !default;
 
 $primary:       $martinique !default;
-$secondary:     $ship-cove !default;
+$secondary:     $shirt-color !default;
+$text-color:    $gray-700 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;

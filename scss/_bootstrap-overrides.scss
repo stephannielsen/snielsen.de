@@ -6,23 +6,27 @@
   color: $primary !important;
 }
 
+.text-secondary {
+  color: $secondary !important;
+}
+
 a {
-  color: $primary;
+  color: $secondary;
   &:hover,
   &:focus,
   &:active {
-    color: darken($primary, 15%);
+    color: darken($secondary, 15%);
   }
 }
 
 .btn-primary {
-  background-color: $gray-700;
-  border-color: lighten($primary, 15%);
+  background-color: $secondary;
+  border-color: lighten($secondary, 15%);
   &:hover,
   &:focus,
   &:active {
     opacity: 1;
-    background-color: $primary;
-    border-color: lighten($primary, 15%);
+    background-color: darken($secondary, 15%);
+    border-color: lighten($secondary, 15%);
   }
 }

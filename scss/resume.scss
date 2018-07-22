@@ -6,6 +6,7 @@
 @import "nav.scss";
 @import "resume-item.scss";
 @import "bootstrap-overrides.scss";
+
 // Components
 .devicon-xamarin-plain {
   width: 48px;
@@ -14,9 +15,9 @@
 
 /* if you want to change the original color */
 .devicon-xamarin-plain path {
-  fill: $gray-700;
+  fill: $text-color;
   &:hover {
-    fill: $martinique;
+    fill: $secondary;
   }
 }
 
@@ -32,5 +33,5 @@
   margin-top: 3rem;
   max-width: 15rem;
   max-height: 15rem;
-  border: 0.5rem solid fade-out($primary, 0.8);
+  border: 0.5rem solid lighten($primary, 20%);
 }

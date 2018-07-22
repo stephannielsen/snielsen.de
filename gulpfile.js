@@ -133,19 +133,21 @@ gulp.task("js", gulp.series("js:minify"));
 gulp.task("default", gulp.series(["css", "js", "vendor"]));
 
 // Configure the browserSync task
-gulp.task("browserSync", function() {
+gulp.task("browserSync", function(done) {
   browserSync.init({
     server: {
       baseDir: "./"
     }
   });
+  done();
 });
 
 // Dev task
-gulp.task("dev", gulp.series(["css", "js", "browserSync"], function() {
-  gulp.watch("./scss/*.scss", ["css"]);
-  gulp.watch("./js/*.js", ["js"]);
-  gulp.watch("./*.html", browserSync.reload);
+gulp.task("dev", gulp.series(["css", "js", "browserSync"], function(done) {
+  gulp.watch("./scss/*.scss", gulp.series("css"));
+  gulp.watch("./js/*.js", gulp.series("js"));
+  gulp.watch("./*.html", gulp.series(browserSync.reload));
+  done();
 }));
 
 //Clean dist folder

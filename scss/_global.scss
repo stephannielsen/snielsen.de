@@ -3,7 +3,7 @@
 body {
   @include body-font;
   padding-top: 54px;
-  color: $gray-700;
+  color: $text-color;
 }
 @media (min-width: 992px) {
   body {
@@ -21,7 +21,7 @@ h6 {
   @include heading-font;
   font-weight: 700;
   text-transform: uppercase;
-  color: $gray-700;
+  color: $text-color;
 }
 
 h1 {
@@ -42,9 +42,9 @@ h2 {
 
 .list-social-icons {
   a {
-    color: $gray-700;
+    color: $secondary;
     &:hover {
-      color: $primary;
+      color: darken($secondary, 15%);
     }
     .fa-lg {
       font-size: 1.75rem;
@@ -56,7 +56,7 @@ h2 {
   font-size: 3rem;
   .list-inline-item i {
     &:hover {
-      color: $primary;
+      color: $secondary;
     }
   }
 }
