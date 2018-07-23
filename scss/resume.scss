@@ -15,9 +15,9 @@
 
 /* if you want to change the original color */
 .devicon-xamarin-plain path {
-  fill: $text-color;
+  fill: $secondary;
   &:hover {
-    fill: $secondary;
+    fill: darken($secondary, 15%);
   }
 }
 
