@@ -10,6 +10,7 @@
 .devicon-xamarin-plain {
     width: 48px;
     height: 48px;
+    vertical-align: baseline;
 }
 
 
@@ -35,6 +36,10 @@
     max-width: 15rem;
     max-height: 15rem;
     border: 0.5rem solid lighten($primary, 20%);
+}
+
+.list-inline-item.xamarin {
+    vertical-align: middle;
 }
 
 #claps-container {
