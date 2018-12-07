@@ -212,6 +212,7 @@ gulp.task("build:dist", gulp.series(["clean:dist", "default"], function(done) {
         "*.png",
         "*.ico",
         "*.svg",
+        "robots.txt",
         "site.webmanifest",
         "browserconfig.xml"
     ]).pipe(gulp.dest("./dist"));
