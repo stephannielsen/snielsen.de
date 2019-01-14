@@ -19,6 +19,7 @@
 
         // Set the recipient email address.
         $recipient = "stephan@snielsen.de";
+        $from = "no-reply@snielsen.de";
 
         // Set the email subject.
         $subject = "New contact from $name";
@@ -29,10 +30,10 @@
         $email_content .= "Message:\n$message\n";
 
         // Build the email headers.
-        $email_headers = "From: $name <$email>";
+        $email_headers = "From:  $from";
 
         // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers)) {
+        if (mail($recipient, $subject, $email_content, $email_headers, $from)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
             echo "Thank you $name! I will reply soon.";
