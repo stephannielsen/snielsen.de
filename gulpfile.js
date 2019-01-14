@@ -70,15 +70,6 @@ gulp.task("vendor", function(done) {
         .src(["./node_modules/jquery.easing/*.js"])
         .pipe(gulp.dest("./vendor/jquery-easing"));
 
-    // Simple Line Icons
-    gulp
-        .src(["./node_modules/simple-line-icons/fonts/**"])
-        .pipe(gulp.dest("./vendor/simple-line-icons/fonts"));
-
-    gulp
-        .src(["./node_modules/simple-line-icons/css/**"])
-        .pipe(gulp.dest("./vendor/simple-line-icons/css"));
-
     gulp
         .src("./node_modules/rss-parser/dist/rss-parser.min.js")
         .pipe(gulp.dest("./vendor/rss-parser"));
@@ -201,12 +192,7 @@ gulp.task("build:dist", gulp.series(["clean:dist", "default"], function(done) {
     gulp
         .src(["./vendor/jquery-easing/*.min.js"])
         .pipe(gulp.dest("./dist/vendor/jquery-easing"));
-    gulp
-        .src(["./vendor/simple-line-icons/css/simple-line-icons.css"])
-        .pipe(gulp.dest("./dist/vendor/simple-line-icons/css"));
-    gulp
-        .src(["./vendor/simple-line-icons/fonts/*"])
-        .pipe(gulp.dest("./dist/vendor/simple-line-icons/fonts"));
+
     gulp.src([
         "*.html",
         "*.png",
