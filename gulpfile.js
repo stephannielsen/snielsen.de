@@ -33,19 +33,6 @@ gulp.task("vendor", function(done) {
         ])
         .pipe(gulp.dest("./vendor/devicons"));
 
-    // Devicon
-    gulp
-        .src([
-            "./node_modules/devicon/**/*",
-            "!./node_modules/devicon/*.json",
-            "!./node_modules/devicon/*.md",
-            "!./node_modules/devicon/gulpfile.js",
-            "!./node_modules/devicon/LICENSE",
-            "!./node_modules/devicon/*.html",
-            "!./node_modules/devicon/icons/**/*.eps"
-        ])
-        .pipe(gulp.dest("./vendor/devicon"));
-
     // Font Awesome
     gulp
         .src([
@@ -155,6 +142,7 @@ gulp.task("build:dist", gulp.series(["clean:dist", "default"], function(done) {
     gulp.src(["./css/*.min.css"]).pipe(gulp.dest("./dist/css"));
     gulp.src(["./js/*.min.js"]).pipe(gulp.dest("./dist/js"));
     gulp.src(["./img/*"]).pipe(gulp.dest("./dist/img"));
+    gulp.src("./redirect/*").pipe(gulp.dest("./dist/redirect"));
     gulp
         .src(["./vendor/bootstrap/css/bootstrap.min.css"])
         .pipe(gulp.dest("./dist/vendor/bootstrap/css"));
@@ -167,15 +155,6 @@ gulp.task("build:dist", gulp.series(["clean:dist", "default"], function(done) {
     gulp
         .src(["./vendor/devicons/fonts/*"])
         .pipe(gulp.dest("./dist/vendor/devicons/fonts"));
-    gulp
-        .src([
-            "./vendor/devicon/devicon-colors.css",
-            "./vendor/devicon/devicon.min.css"
-        ])
-        .pipe(gulp.dest("./dist/vendor/devicon"));
-    gulp
-        .src(["./vendor/devicon/fonts/*"])
-        .pipe(gulp.dest("./dist/vendor/devicon/fonts"));
     gulp
         .src(["./vendor/font-awesome/css/*.min.css"])
         .pipe(gulp.dest("./dist/vendor/font-awesome/css"));
