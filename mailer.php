@@ -3,6 +3,8 @@
 
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        //Exit if the honeypot field contains data
+        if(!empty($_POST['website'])) die();
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["nameInput"]));
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
