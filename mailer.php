@@ -10,6 +10,7 @@
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["emailInput"]), FILTER_SANITIZE_EMAIL);
         $message = trim($_POST["messageInput"]);
+        $website = $_POST['website'];
 
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -30,6 +31,7 @@
         $email_content = "Name: $name\n";
         $email_content .= "Email: $email\n\n";
         $email_content .= "Message:\n$message\n";
+        $email_content .= "\n\n\nWebsite:\n$website\n";
 
         // Build the email headers.
         $email_headers = "From:  $from";
