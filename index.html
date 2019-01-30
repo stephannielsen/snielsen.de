@@ -409,8 +409,16 @@
                             Please enter a message.
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group row">
+                        <div class="col-2">
+                            <input id="jcaptchaInput" class="jCaptcha form-control" type="text" placeholder="Type in result please" required>
+                            <div class="invalid-feedback">
+                                Please solve the equation.
+                            </div>
+                        </div>
                         <input type="text" id="website" name="website"/> <!-- tricky tricky honeypot -->
+                    </div>
+                    <div class="form-group">
                         <!-- <div class="col"> -->
                         <button type="submit" class="btn btn-primary mb-2">Send
               <i class="fa fa-paper-plane"></i>

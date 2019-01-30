@@ -47,12 +47,35 @@ import './../scss/resume.scss'
     });
 })($); // End of use strict
 
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
     "use strict";
     window.addEventListener(
         "load",
         function() {
+            
+            var myCaptcha = new jCaptcha({
+                clearOnSubmit: false,
+                callback: function(response, $captchaInputElement) {
+                    if (response === 'success') {
+                      $captchaInputElement[0].classList.remove('is-invalid');
+                      $captchaInputElement[0].classList.add('is-valid');
+                    }
+            
+                    if (response === 'error') {
+                      $captchaInputElement[0].classList.remove('is-valid');
+                      $captchaInputElement[0].classList.add('is-invalid');
+                    }
+                }
+            });
+
+            var captchaInput = document.querySelector("#jcaptchaInput");
+            captchaInput.value = '';
+            captchaInput.addEventListener('change', function(e) {
+                myCaptcha.validate();
+            })
+
             // Fetch all the forms we want to apply custom Bootstrap validation styles to
             var forms = document.getElementsByClassName("needs-validation");
             // Loop over them and prevent submission
