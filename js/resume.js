@@ -57,7 +57,10 @@ import './../scss/resume.scss'
         function() {
             
             var myCaptcha = new jCaptcha({
+                canvasFontFamily: 'Open Sans',
+                canvasFillStyle: '#495057',
                 clearOnSubmit: false,
+                requiredValue: '',
                 callback: function(response, $captchaInputElement) {
                     if (response === 'success') {
                       $captchaInputElement[0].classList.remove('is-invalid');
