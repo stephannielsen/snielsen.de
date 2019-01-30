@@ -4,6 +4,7 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css' // Import precompiled Bootstrap css
 import '@fortawesome/fontawesome-free/css/all.css'
 import { MediumClaps } from './medium-claps.js'
+import jCaptcha from 'js-captcha'
 import 'devicons/css/devicons.min.css'
 import './../scss/resume.scss'
 
