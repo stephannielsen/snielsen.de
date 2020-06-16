@@ -49,6 +49,61 @@ import './../scss/resume.scss'
 })($); // End of use strict
 
 
+(function() {
+    "use strict";
+    // Get the form.
+    var form = $("#contact-form");
+
+    // Get the messages div.
+    var formMessages = $("#form-messages");
+
+    // Set up an event listener for the contact form.
+    $(form).submit(function(event) {
+        // Stop the browser from submitting the form.
+        event.preventDefault();
+        $(formMessages).css("visibility", "hidden");
+
+        var formData = $(form).serialize();
+        // Submit the form using AJAX.
+        $.ajax({
+                type: "POST",
+                url: $(form).attr("action"),
+                data: formData
+            })
+            .done(function(response) {
+                // Make sure that the formMessages div has the 'success' class.
+                $(formMessages).removeClass("alert-danger");
+                $(formMessages).addClass("alert-success");
+
+                // Set the message text.
+                $(formMessages).text(response);
+                $(formMessages).css("visibility", "visible");
+
+                // Clear the form.
+                $("#nameInput").val("");
+                $("#emailInput").val("");
+                $("#messageInput").val("");
+                $("#jcaptchaInput").val("");
+                $(form).removeClass("was-validated");
+            })
+            .fail(function(data) {
+                // Make sure that the formMessages div has the 'error' class.
+                $(formMessages).removeClass("alert-success");
+                $(formMessages).addClass("alert-danger");
+
+                // Set the message text.
+                if (data.responseText !== "") {
+                    $(formMessages).text(data.responseText);
+                } else {
+                    $(formMessages).text(
+                        "Oops! An error occured and your message could not be sent."
+                    );
+                }
+                $(formMessages).css("visibility", "visible");
+            });
+    });
+})();
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
     "use strict";
@@ -87,7 +142,7 @@ import './../scss/resume.scss'
                 form.addEventListener(
                     "submit",
                     function(event) {
-                        if (form.checkValidity() === false) {
+                        if (form.checkValidity() === false || captchaInput.classList.contains('is-invalid')) {
                             event.preventDefault();
                             event.stopPropagation();
                         }
@@ -107,59 +162,5 @@ import './../scss/resume.scss'
     new MediumClaps({
         feedUrl: 'https://allorigins.snielsen.de/get?url=' + encodeURIComponent('https://medium.com/feed/@stephannielsen/has-recommended'),
         missingImage: 'https://source.unsplash.com/random/640x480',
-    });
-})();
-
-(function() {
-    "use strict";
-    // Get the form.
-    var form = $("#contact-form");
-
-    // Get the messages div.
-    var formMessages = $("#form-messages");
-
-    // Set up an event listener for the contact form.
-    $(form).submit(function(event) {
-        // Stop the browser from submitting the form.
-        event.preventDefault();
-        $(formMessages).css("visibility", "hidden");
-
-        var formData = $(form).serialize();
-        // Submit the form using AJAX.
-        $.ajax({
-                type: "POST",
-                url: $(form).attr("action"),
-                data: formData
-            })
-            .done(function(response) {
-                // Make sure that the formMessages div has the 'success' class.
-                $(formMessages).removeClass("alert-danger");
-                $(formMessages).addClass("alert-success");
-
-                // Set the message text.
-                $(formMessages).text(response);
-                $(formMessages).css("visibility", "visible");
-
-                // Clear the form.
-                $("#nameInput").val("");
-                $("#emailInput").val("");
-                $("#messageInput").val("");
-                $(form).removeClass("was-validated");
-            })
-            .fail(function(data) {
-                // Make sure that the formMessages div has the 'error' class.
-                $(formMessages).removeClass("alert-success");
-                $(formMessages).addClass("alert-danger");
-
-                // Set the message text.
-                if (data.responseText !== "") {
-                    $(formMessages).text(data.responseText);
-                } else {
-                    $(formMessages).text(
-                        "Oops! An error occured and your message could not be sent."
-                    );
-                }
-                $(formMessages).css("visibility", "visible");
-            });
     });
 })();
