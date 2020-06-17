@@ -1,3 +1,11 @@
+import $ from "jquery";
+import 'jquery.easing'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css' // Import precompiled Bootstrap css
+import '@fortawesome/fontawesome-free/css/all.css'
+import 'rss-parser'
+import { MediumClaps } from './medium-claps.min.js'
+
 (function($) {
     "use strict"; // Start of use strict
 
@@ -36,7 +44,7 @@
     $("body").scrollspy({
         target: "#sideNav"
     });
-})(jQuery); // End of use strict
+})($); // End of use strict
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {

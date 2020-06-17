@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 /* Simple spam protection for email addresses using jQuery.
  * Well, the protection isn’t jQuery-based, but you get the idea.
  * This snippet allows you to slightly ‘obfuscate’ email addresses to make it harder for spambots to harvest them, while still offering a readable address to your visitors.
