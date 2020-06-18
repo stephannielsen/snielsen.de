@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css' // Import precompiled Bootstrap css
 import '@fortawesome/fontawesome-free/css/all.css'
 import 'rss-parser'
 import { MediumClaps } from './medium-claps.min.js'
+import 'devicons/css/devicons.min.css'
 
 (function($) {
     "use strict"; // Start of use strict
