@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/resume.css" rel="stylesheet">
+    <!-- <link href="scss/resume.scss" rel="stylesheet"> -->
 
 </head>
 
@@ -74,14 +74,10 @@
     </nav>
 
     <div class="container-fluid p-0">
-        <!-- <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-      <div class="my-auto"> -->
 
         <div class="d-block d-lg-none" id="img-profile-container">
             <img class="img-fluid img-profile rounded-circle mx-auto mb-1" src="img/profile.jpg" alt="">
         </div>
-        <!-- </div>
-    </section> -->
         <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
             <div class="my-auto">
                 <h1 class="mb-0">Stephan
@@ -360,10 +356,10 @@
                                           <div class="post-image" style="background: linear-gradient(transparent, transparent, transparent, #fff), url(#{{postImage}}) no-repeat center/cover;">
                                           </div>
                                           <div class="post-title">
-                                              <h2>{{postTitle}}</h2>
+                                              <h2>#{{postTitle}}</h2>
                                           </div>
                                           <div class="post-author">
-                                              <p>by {{postAuthor}}</p>
+                                              <p>by #{{postAuthor}}</p>
                                           </div>
                                       </div>
                                   </div>
@@ -630,6 +626,9 @@
                         </li>
                         <li>
                             <a href="https://sass-lang.com/">Sass</a>
+                        </li>
+                        <li>
+                            <a href="https://parceljs.org/">Parcel</a>
                         </li>
                         <li>
                             <a href="https://realfavicongenerator.net">RealFaviconGenerator</a>

@@ -3,9 +3,9 @@ import 'jquery.easing'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css' // Import precompiled Bootstrap css
 import '@fortawesome/fontawesome-free/css/all.css'
-import 'rss-parser'
-import { MediumClaps } from './medium-claps.min.js'
+import { MediumClaps } from './medium-claps.js'
 import 'devicons/css/devicons.min.css'
+import './../scss/resume.scss'
 
 (function($) {
     "use strict"; // Start of use strict
