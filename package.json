@@ -33,6 +33,6 @@
     },
     "scripts": {
         "dev": "parcel ./index.html",
-        "build": "parcel build ./index.html ./mailer.php ./redirect/index.php"
+        "build": "parcel build ./index.html ./redirect/index.php"
     }
 }
