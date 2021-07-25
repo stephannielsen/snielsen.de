@@ -200,3 +200,4 @@ js/*.min.js
 css
 dist
 .cache/
+.parcel-cache/
