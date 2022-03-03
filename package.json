@@ -29,7 +29,7 @@
         "@parcel/transformer-sass": "^2.0.0-beta.3.1",
         "@parcel/transformer-webmanifest": "^2.0.0-beta.3.1",
         "parcel": "^2.0.0-beta.3.1",
-        "sass": "^1.26.11"
+        "sass": "^1.49.9"
     },
     "scripts": {
         "dev": "parcel ./index.html",
