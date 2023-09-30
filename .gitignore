@@ -197,7 +197,6 @@ $RECYCLE.BIN/
 vendor
 js/*.min.js
 !js/medium-claps.min.js
-css
 dist
 .cache/
 .parcel-cache/
