@@ -34,7 +34,7 @@
         "https-browserify": "^1.0.0",
         "parcel": "^2.9.3",
         "process": "^0.11.10",
-        "punycode": "^1.4.1",
+        "punycode": "^2.3.0",
         "querystring-es3": "^0.2.1",
         "sass": "^1.68.0",
         "stream-browserify": "^3.0.0",
